@@ -21,7 +21,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
       body: Center(
         child: Column(
           children: <Widget>[
-            Text('Add or Less click', style: _textStyle),
+            Text('Add or remove click', style: _textStyle),
             Text('$_count', style: _textStyle),
           ],
           mainAxisAlignment: MainAxisAlignment.center,
@@ -37,7 +37,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
       children: <Widget>[
         SizedBox(width: 5),
         FloatingActionButton(
-            onPressed: _less,
+            onPressed: _remove,
             child: Icon(Icons.remove),
             backgroundColor: Colors.green),
         SizedBox(width: 8),
@@ -55,7 +55,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
     );
   }
 
-  void _less() {
+  void _remove() {
     setState(() => _count--);
   }
 
